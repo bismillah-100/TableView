@@ -36,7 +36,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         tableView.allowsEmptySelection = true
 
         // Membuat 10 data acak
-        for i in 1...78 {
+        for i in 1...79 {
             let rowData = [
                 "Data Kolom 1 Baris \(i) - Random \(Int.random(in: 100...999))",
                 "Data Kolom 2 Baris \(i) - Random \(Int.random(in: 100...999))"
