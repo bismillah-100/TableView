@@ -19,12 +19,10 @@ jobs:
             -configuration Release \
             -destination "generic/platform=macOS"
 
-      - name: Export .app
+      - name: Extract .app from archive
         run: |
-          xcodebuild -exportArchive \
-            -archivePath build/TableView.xcarchive \
-            -exportPath build \
-            -exportOptionsPlist ExportOptions.plist
+          mkdir -p build
+          cp -R build/TableView.xcarchive/Products/Applications/TableView.app build/
 
       - name: Zip .app
         run: |
