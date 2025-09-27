@@ -66,16 +66,13 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
 
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         guard let columnIdentifier = tableColumn?.identifier.rawValue else { return nil }
-
         let rowData = data[row]
-
         // Asumsikan identifier kolom adalah "Kolom1" dan "Kolom2"
         if columnIdentifier == "Kolom1" {
             return rowData[0]
         } else if columnIdentifier == "Kolom2" {
             return rowData[1]
         }
-
         return nil
     }
 
