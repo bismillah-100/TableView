@@ -5,6 +5,9 @@ on:
     tags:
       - "v*"
 
+permissions:
+  contents: write  # penting untuk bikin release
+
 jobs:
   build:
     runs-on: macos-latest
